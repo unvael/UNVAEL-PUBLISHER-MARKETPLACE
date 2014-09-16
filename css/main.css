@@ -4,31 +4,77 @@
    Author's custom styles
    ========================================================================== */
 
-body {
-   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 300;
-}
+   body {
+     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+     font-weight: 300;
+   }
 
-#countdown {
-  width: 170px;
-  margin: 0 auto;
-  display: block;
-  border: 2px solid #000;
-}
+   .jumbotron {
+    background-image: url(../img/allsaints/logo.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+  }
 
-#songs>div:nth-child(even) {
-    background: #eee;
-}
+  #countdown {
+    width: 170px;
+    margin: 0 auto;
+    display: block;
+    border: 2px solid #000;
+  }
 
-.glyphicon-36 {
+  #songs>div:nth-child(even)>.songImage {
+    opacity: 0.15;
+  }
+
+  .songImage {
+    z-index: -10;
+    position: absolute;
+    margin-left: -15px;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.25;
+  }
+
+  #songs>div:nth-child(1)>.songImage {
+    background-image: url(../img/allsaints/model_1.png);
+  }
+
+  #songs>div:nth-child(2)>.songImage {
+    background-image: url(../img/allsaints/model_2.png);
+  }
+
+  #songs>div:nth-child(3)>.songImage {
+    background-image: url(../img/allsaints/model_3.png);
+  }
+
+  #songs>div:nth-child(4)>.songImage {
+    background-image: url(../img/allsaints/model_1.png);
+  }
+
+  #songs>div:nth-child(5)>.songImage {
+    background-image: url(../img/allsaints/model_2.png);
+  }
+
+  #songs>div:nth-child(6)>.songImage {
+    background-image: url(../img/allsaints/model_3.png);
+  }
+
+  #songs>div:nth-child(7)>.songImage {
+    background-image: url(../img/allsaints/model_1.png);
+  }
+
+  .glyphicon-36 {
     font-size: 36px;
-}
+  }
 
-.glyphicon-48 {
-	font-size: 48px;
-}
+  .glyphicon-48 {
+   font-size: 48px;
+ }
 
-.parallax {
+ .parallax {
   perspective: 1px;
   height: 300px;
   overflow-x: hidden;
