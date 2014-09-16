@@ -1,16 +1,32 @@
+// shamelessly copied from http://stackoverflow.com/questions/10073699/pad-a-number-with-leading-zeros-in-javascript
+function pad(n, width, z) {
+  z = z || '0';
+  n = n + '';
+  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}
+
+var countdownElem = document.getElementById('countdown'); 
+
+var endTime = moment("20140917", "YYYYMMDD");
+
+var timeLeft = countdown(null, endTime, countdown.HOURS | countdown.MINUTES | countdown.SECONDS);
+
+var timeString = pad(timeLeft.hours,2) + ":" + pad(timeLeft.minutes,2) + ":" + pad(timeLeft.seconds,2);
+
 document.addEventListener("DOMContentLoaded", function(event) {
 	// console.log("sup");
 
-	var timeLeft = countdown(null, moment("20140916", "YYYYMMDD"), countdown.HOURS | countdown.MINUTES | countdown.SECONDS);
-		document.getElementById('countdown').innerHTML = timeLeft.toHTML("");
+	countdownElem.innerHTML = timeString;
 
 	window.setInterval(function(){
-		var timeLeft = countdown(null, moment("20140916", "YYYYMMDD"), countdown.HOURS | countdown.MINUTES | countdown.SECONDS);
-		document.getElementById('countdown').innerHTML = timeLeft.toHTML("");
+		timeLeft = countdown(null, endTime, countdown.HOURS | countdown.MINUTES | countdown.SECONDS);
+		timeString = pad(timeLeft.hours,2) + ":" + pad(timeLeft.minutes,2) + ":" + pad(timeLeft.seconds,2);
+		countdownElem.innerHTML = timeString;
 	}, 1000);
 
 });
 
+// iOS safari 'bounce control', need to add some containers or something to get this just right
 // document.addEventListener("touchmove", function(event){
 //     event.preventDefault();
 // });
