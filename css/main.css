@@ -9,6 +9,13 @@ body {
    font-weight: 300;
 }
 
+#countdown {
+  width: 170px;
+  margin: 0 auto;
+  display: block;
+  border: 2px solid #000;
+}
+
 #songs>div:nth-child(even) {
     background: #eee;
 }
