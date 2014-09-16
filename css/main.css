@@ -1,0 +1,52 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+}
+
+#songs>div:nth-child(even) {
+    background: #eee;
+}
+
+.glyphicon-36 {
+    font-size: 36px;
+}
+
+.glyphicon-48 {
+	font-size: 48px;
+}
+
+.parallax {
+  perspective: 1px;
+  height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  transform: translateZ(-1px);
+}
+
+
+
+
+
+
+
+
+
+
