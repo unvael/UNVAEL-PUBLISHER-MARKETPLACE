@@ -7,7 +7,7 @@ function pad(n, width, z) {
 
 var countdownElem = document.getElementById('countdown'); 
 
-var endTime = moment("20140917", "YYYYMMDD");
+var endTime = moment("20140919", "YYYYMMDD");
 
 var timeLeft = countdown(null, endTime, countdown.HOURS | countdown.MINUTES | countdown.SECONDS);
 
