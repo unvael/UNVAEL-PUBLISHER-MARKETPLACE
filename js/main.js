@@ -25,13 +25,3 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	}, 1000);
 
 });
-
-// iOS safari 'bounce control', need to add some containers or something to get this just right
-// document.addEventListener("touchmove", function(event){
-//     event.preventDefault();
-// });
-
-// var scrollingDiv = document.getElementById('songs');
-// scrollingDiv.addEventListener('touchmove', function(event){
-//     event.stopPropagation();
-// });

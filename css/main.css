@@ -7,97 +7,165 @@
    body {
      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
      font-weight: 300;
+     background-color: #000;
    }
 
-   .jumbotron {
+   footer {
+    color: #eee;
+   }
+
+  #bgImage {
+    display: block;
+    width: 100%;
+    height: 100% !important;
+    position: absolute;
+    top: 0;
+    height: 0;
+    z-index: -999;
+    animation: rainbow;
+    animation-duration: 12s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  .jumbotron {
+    background-color: #fff;
     background-image: url(../img/allsaints/logo.png);
     background-position: center top;
     background-repeat: no-repeat;
     padding-top: 100px;
+    opacity: 0.75;
+    animation: jumbotronOpacityDance;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
   }
 
   #countdown {
     width: 170px;
     margin: 0 auto;
     display: block;
-    border: 2px solid #000;
+    border: 2px solid rgba(0,0,0,0);
+    animation: countdownBorderFadeIn 4s 1 ease-out;
+    animation-fill-mode: forwards;
   }
 
-  #songs>div:nth-child(even)>.songImage {
-    opacity: 0.15;
+  #songs>div {
+    background-color: #fff;
+    opacity: 0.6;
+    animation: songOpacityDance;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
   }
 
-  .songImage {
+  #songs>div:nth-child(even) {
+    background-color: #fff;
+    opacity: 0.75;
+    animation: evenSongOpacityDance;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+/*  .songImage {
     z-index: -10;
     position: absolute;
     margin-left: -15px;
     width: 100%;
     height: 100%;
+    background-color: #fff;
     background-repeat: no-repeat;
     background-size: 100%;
-    opacity: 0.25;
+    opacity: 0.75;
+    animation: songOpacityDance;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    }*/
+
+    .glyphicon-36 {
+      font-size: 36px;
+    }
+
+    .glyphicon-48 {
+     font-size: 48px;
+   }
+
+   .parallax {
+    perspective: 1px;
+    height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
-  #songs>div:nth-child(1)>.songImage {
-    background-image: url(../img/allsaints/model_1.png);
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .parallax__layer--base {
+    transform: translateZ(0);
+  }
+  .parallax__layer--back {
+    transform: translateZ(-1px);
   }
 
-  #songs>div:nth-child(2)>.songImage {
-    background-image: url(../img/allsaints/model_2.png);
+@keyframes jumbotronOpacityDance { 
+    0% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 0.6;
+    }
   }
 
-  #songs>div:nth-child(3)>.songImage {
-    background-image: url(../img/allsaints/model_3.png);
+  @keyframes songOpacityDance { 
+    0% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 0.75;
+    }
   }
 
-  #songs>div:nth-child(4)>.songImage {
-    background-image: url(../img/allsaints/model_1.png);
+  @keyframes evenSongOpacityDance { 
+    0% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 0.6;
+    }
   }
 
-  #songs>div:nth-child(5)>.songImage {
-    background-image: url(../img/allsaints/model_2.png);
+  @keyframes rainbow {
+    0% {
+      filter: hue-rotate(360deg);
+      -webkit-filter: hue-rotate(360deg);
+      -moz-filter: hue-rotate(360deg);
+      -o-filter: hue-rotate(360deg);
+      -ms-filter: hue-rotate(360deg);
+    }
+    100% { 
+
+    }
   }
 
-  #songs>div:nth-child(6)>.songImage {
-    background-image: url(../img/allsaints/model_3.png);
+  @keyframes countdownBorderFadeIn {
+    0% {
+      border: 2px solid rgba(0,0,0,0);
+    }
+    100% {
+      border: 2px solid rgba(0,0,0,1.0);
+    }
   }
-
-  #songs>div:nth-child(7)>.songImage {
-    background-image: url(../img/allsaints/model_1.png);
-  }
-
-  .glyphicon-36 {
-    font-size: 36px;
-  }
-
-  .glyphicon-48 {
-   font-size: 48px;
- }
-
- .parallax {
-  perspective: 1px;
-  height: 300px;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.parallax__layer--base {
-  transform: translateZ(0);
-}
-.parallax__layer--back {
-  transform: translateZ(-1px);
-}
-
-
-
-
-
 
 
 
